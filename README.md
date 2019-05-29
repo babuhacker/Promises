@@ -11,3 +11,11 @@ A Promise object represents a value that may not be available yet, but will be r
 promises a way to resolve asynchronous thing.
 
 anonymous
+
+difference between try-catch block and  .then .catch
+
+
+promises has three state:----------1)Fullfill
+                                    2)
+
+  
