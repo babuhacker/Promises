@@ -2,18 +2,42 @@ to unserstand promise , we start to
 synchronous and asynchronous:
 
 synchronous:
+               we can simplify the definition of synchronous code as “a bunch of statements in sequence". so each statement in your code is executed one after the other. This means each statement has to wait for the previous one to finish executing.
 
-            we can simplify the definition of synchronous code as “a bunch of statements in sequence". so each statement in your code is executed one after the other. This means each statement has to wait for the previous one to finish executing.
+  console.log('First');
+  console.log('Second');
+  console.log('Third');
 
-            console.log('First');
-            console.log('Second');
-            console.log('Third');
+The statements above will execute in order, outputting “First”, “Second”, “Third” to the console. That’s because it’s written synchronously.
 
-            The statements above will execute in order, outputting “First”, “Second”, “Third” to the console. That’s because it’s written synchronously.
-
-problem with synchronous way:
+problem with synchronous way: asynchronous callbacks 
 
 Asynchronous:
+
+
+            // Say "Hello."
+            console.log("Hello.");
+            // Say "Goodbye" two seconds from now.
+            setTimeout(function() {
+              console.log("Goodbye!");
+            }, 2000);
+            // Say "Hello again!"
+            console.log("Hello again!");
+  If you are only familiar with synchronous code, you might expect the code above to behave in the following way:
+
+                Say "Hello".
+                Do nothing for two seconds.
+                Say "Goodbye!"
+                Say "Hello again!"      
+
+But setTimeout does not pause the execution of the code. It only schedules something to happen in the future, and then immediately continues to the next line.
+
+                Say "Hello."
+                Say "Hello again!"
+                Do nothing for two seconds.
+                Say "Goodbye!"
+ 
+ 
 
 # Promises
 Promises in javascript(topic of javascript/ES6)
