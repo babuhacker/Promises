@@ -11,6 +11,36 @@ synchronous:
 The statements above will execute in order, outputting “First”, “Second”, “Third” to the console. That’s because it’s written synchronously.
 
 problem with synchronous way:
+  1)Anonymous function:
+                            function A(){
+                              throw new Error('Oops!');
+                            }
+                            function B(){
+                              A();
+                            }
+                            function C(){
+                              B();
+                            }
+                            c();
+                            
+   2)Max call stack stack size exceeded:
+                          
+                            function A(){
+                              return A();
+                            };
+                            A();
+    
+    
+   3)Bloacking:
+                 var a = $.getSync("//foo.com");
+                 var b = $.getSync("//foo.com");
+                 var c = $.getSync("//foo.com");
+                 
+                 console.log(a);
+                 console.log(b);
+                 console.log(c);
+     
+     
 solution of synchronous problem : asynchronous callbacks 
 
 Asynchronous:Asynchronous means that things can happen independently of the main program flow.
