@@ -2,11 +2,11 @@ to unserstand promise , we start to
 synchronous and asynchronous:
 
 synchronous:
-               we can simplify the definition of synchronous code as “a bunch of statements in sequence". so each statement in your code is executed one after the other. This means each statement has to wait for the previous one to finish executing.
-
-  console.log('First');
-  console.log('Second');
-  console.log('Third');
+               we can simplify the definition of synchronous code as “a bunch of statements in sequence". so each statement in your code is executed one after the other. This means each statement has to wait for the previous one to finish executing:
+               
+      console.log('First');
+      console.log('Second');
+      console.log('Third');
 
 The statements above will execute in order, outputting “First”, “Second”, “Third” to the console. That’s because it’s written synchronously.
 
