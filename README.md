@@ -10,9 +10,10 @@ synchronous:
 
 The statements above will execute in order, outputting “First”, “Second”, “Third” to the console. That’s because it’s written synchronously.
 
-problem with synchronous way: asynchronous callbacks 
+problem with synchronous way:
+solution of synchronous problem : asynchronous callbacks 
 
-Asynchronous:
+Asynchronous:Asynchronous means that things can happen independently of the main program flow.
 
 
             // Say "Hello."
@@ -37,7 +38,35 @@ But setTimeout does not pause the execution of the code. It only schedules somet
                 Do nothing for two seconds.
                 Say "Goodbye!"
  
- 
+ The problem with callbacks
+
+Callbacks are great for simple cases!
+
+However every callback adds a level of nesting, and when you have lots of callbacks, the code starts to be complicated very quickly:
+
+        window.addEventListener('load', () => {
+          document.getElementById('button').addEventListener('click', () => {
+            setTimeout(() => {
+              items.forEach(item => {
+                //your code here
+              })
+            }, 2000)
+          })
+        })
+
+This is just a simple 4-levels code, but I’ve seen much more levels of nesting and it’s not fun.
+
+How do we solve this?
+Alternatives to callbacks
+
+Starting with ES6, JavaScript introduced several features that help us with asynchronous code that do not involve using callbacks:
+
+    Promises (ES2015)
+    Async/Await (ES2017)
+
+
+
+
 
 # Promises
 Promises in javascript(topic of javascript/ES6)
