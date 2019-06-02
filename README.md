@@ -44,7 +44,7 @@ problem with synchronous way:
 solution of synchronous problem : asynchronous callbacks 
 
 Asynchronous:Asynchronous means that things can happen independently of the main program flow.
-
+The setTimeout function is probably the simplest way to asynchronously schedule code to run in the future:
 
             // Say "Hello."
             console.log("Hello.");
@@ -67,6 +67,11 @@ But setTimeout does not pause the execution of the code. It only schedules somet
                 Say "Hello again!"
                 Do nothing for two seconds.
                 Say "Goodbye!"
+ 
+ JavaScript can have asynchronous code, but it is generally single-threaded. 
+ 
+ Asynchronous code needs to be structured in a different way than synchronous code, and the most basic way to do that is with callback functions.
+ 
  
  The problem with callbacks
 
