@@ -73,7 +73,7 @@ But setTimeout does not pause the execution of the code. It only schedules somet
  Asynchronous code needs to be structured in a different way than synchronous code, and the most basic way to do that is with callback functions.
  
  
- The problem with callbacks
+ The problem with callbacks: one problem is that anonymous function in  callbacks
 
 Callbacks are great for simple cases!
 
